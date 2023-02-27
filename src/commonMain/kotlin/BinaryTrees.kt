@@ -11,7 +11,7 @@ import kotlin.math.max
  * modified by Mike Krüger
  * *reset*
  */
-object binarytrees {
+object BinaryTrees {
     fun test(args: Array<String>) {
         val n = if (args.isNotEmpty()) args[0].toInt() else 21
         val minDepth = 4
