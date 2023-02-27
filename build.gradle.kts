@@ -43,6 +43,12 @@ kotlin {
             useJUnitPlatform()
         }
     }
+    targets.withType<org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget> {
+        binaries.all {
+            freeCompilerArgs = freeCompilerArgs + "-Xallocator=std"
+        }
+    }
+
     sourceSets {
         val nativeMain by getting
         val nativeTest by getting
@@ -51,6 +57,7 @@ kotlin {
         val commonMain by getting
         val commonTest by getting {
             dependencies {
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
                 implementation(kotlin("test"))
             }
         }

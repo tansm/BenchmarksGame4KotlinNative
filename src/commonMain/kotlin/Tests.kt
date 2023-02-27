@@ -5,7 +5,8 @@ object Tests {
 
     fun testAll(args: Array<String>){
         //runTest(args, TooSimple::test)
-        runTest(args, BinaryTrees::test)
+        //runTest(args, BinaryTrees::test)
+        runTest(args, NBody::test)
     }
 
     @OptIn(ExperimentalTime::class)
